@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jeet Shorey — Portfolio</title>
+
+  <link rel="stylesheet" href="static/css/style.css">
+  <!-- three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r150/three.min.js"></script>
+</head>
+<body>
+  <div id="three-wrap"><canvas id="three-canvas"></canvas></div>
+
+  <aside id="sidebar" class="glass">
+    <div class="brand">
+      <div class="mini-photo">
+        <img src="static/img/photo.jpg" alt="Jeet" />
+      </div>
+      <h3>Jeet Shorey</h3>
+      <small>Data Scientist • Builder</small>
+    </div>
+
+    <nav id="nav">
+      <a href="#mission" class="nav-link" data-target="mission">Mission</a>
+      <a href="#projects" class="nav-link" data-target="projects">Projects</a>
+      <a href="#tech" class="nav-link" data-target="tech">Tech Stack</a>
+      <a href="#about" class="nav-link" data-target="about">About / Education</a>
+      <a href="#contact" class="nav-link" data-target="contact">Contact</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="mailto:shoreyjeet@gmail.com">shoreyjeet@gmail.com</a>
+      <a href="https://www.linkedin.com/in/jeet-shorey-b03922348/?originalSubdomain=in" target="_blank">LinkedIn</a>
+    </div>
+  </aside>
+
+  <main id="main">
+    <header class="hero glass-2">
+      <div class="hero-left">
+        <!-- BIG rectangular photo -->
+        <div class="hero-photo-rect">
+          <img src="static/img/photo.jpg" alt="Jeet Shorey">
+        </div>
+      </div>
+      <div class="hero-right">
+        <h1>Jeet Shorey</h1>
+        <p class="lead">I’m a data science enthusiast passionate about building responsible, impactful ML products.</p>
+        <div class="cta-row">
+          <a class="btn" href="mailto:shoreyjeet@gmail.com">Email</a>
+          <a class="btn outline" href="https://www.linkedin.com/in/jeet-shorey-b03922348/?originalSubdomain=in" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="mission" class="section card">
+      <h2>Mission</h2>
+      <p>
+        I’m Jeet Shorey — a curious builder bridging data science and real-world impact. My mission is to craft intelligent, privacy-aware systems that turn noisy data into clear decisions and usable products. I focus on ethical machine learning, efficient data pipelines, and creative engineering that people can actually use. I love taking research-level models and shaping them into lightweight, interpretable tools that work in production — whether that’s a cricket match predictor, a real-time computer-vision system for accessibility, or a privacy-preserving recommender. I ship and iterate fast, mentor, and collaborate openly.
+      </p>
+    </section>
+
+    <section id="projects" class="section card">
+      <h2>Top Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-badge">Cricket</div>
+          <h3>Cricket Match Predictor</h3>
+          <p>ML pipeline using player stats, ball-by-ball features and ensemble models to forecast match outcomes and produce explainable predictions and dashboards for analysts.</p>
+        </article>
+
+        <article class="project-card">
+          <div class="project-badge">Accessibility</div>
+          <h3>Braille to Speech</h3>
+          <p>Image processing + CNN to read braille from camera frames and convert to synthesized speech — realtime, low-latency, and light enough for mobile devices.</p>
+        </article>
+
+        <article class="project-card">
+          <div class="project-badge">Recommender</div>
+          <h3>Privacy-Preserving Recommender System</h3>
+          <p>Hybrid recommender combining collaborative filtering, content features and differential-privacy-inspired techniques to respect user privacy while keeping utility high.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="tech" class="section card">
+      <h2>Tech Stack</h2>
+      <div class="stack-grid">
+        <div class="stack-box">Python</div>
+        <div class="stack-box">TensorFlow/Keras</div>
+        <div class="stack-box">React.js</div>
+        <div class="stack-box">Docker</div>
+        <div class="stack-box">AWS</div>
+        <div class="stack-box">SQL / MongoDB</div>
+      </div>
+
+      <h3>Skills</h3>
+      <div class="skills-grid">
+        <div class="skill-chip">Python</div>
+        <div class="skill-chip">R</div>
+        <div class="skill-chip">SQL</div>
+        <div class="skill-chip">HTML5</div>
+        <div class="skill-chip">CSS</div>
+        <div class="skill-chip">JavaScript</div>
+        <div class="skill-chip">NumPy</div>
+        <div class="skill-chip">Pandas</div>
+        <div class="skill-chip">Scikit-learn</div>
+        <div class="skill-chip">OpenCV</div>
+        <div class="skill-chip">Streamlit</div>
+        <div class="skill-chip">TensorFlow</div>
+      </div>
+    </section>
+
+    <section id="about" class="section card">
+      <h2>About & Education</h2>
+      <p><strong>B.Tech (Data Science)</strong> — MPSTME, NMIMS (2022-2026)</p>
+      <p><strong>HSC</strong> — Queen's Mary (2020-2022)</p>
+      <p><strong>ICSE (10th)</strong> — RBK School, Mira Road —(2020)</p>
+    </section>
+
+    <section id="contact" class="section card">
+      <h2>Get in touch</h2>
+      <p>Email: <a href="mailto:shoreyjeet@gmail.com">shoreyjeet@gmail.com</a></p>
+      <p>Phone: <a href="tel:+919833232395">9833232395</a></p>
+      <p>Location: Mumbai, India</p>
+    </section>
+
+    <footer class="footer">
+      <small>Built with ❤️ — Jeet Shorey</small>
+    </footer>
+  </main>
+
+  <script src="static/js/main.js"></script>
+</body>
+</html>
