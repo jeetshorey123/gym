@@ -1,4 +1,7 @@
 {
+  "buildCommand": "cd my_portfolio && npm run build",
+  "installCommand": "cd my_portfolio && npm install",
+  "outputDirectory": "my_portfolio/.next",
   "rewrites": [
     {
       "source": "/(.*)",
