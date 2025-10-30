@@ -1,0 +1,134 @@
+{
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "framework": "nextjs",
+  "installCommand": "npm install",
+  "outputDirectory": ".next",
+  "functions": {
+    "src/app/api/**/*.ts": {
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/gym",
+      "destination": "/"
+    },
+    {
+      "source": "/gym/(.*)",
+      "destination": "/$1"
+    },
+    {
+      "source": "/workout",
+      "destination": "/dashboard"
+    },
+    {
+      "source": "/training",
+      "destination": "/dashboard"
+    },
+    {
+      "source": "/exercise",
+      "destination": "/dashboard"
+    },
+    {
+      "source": "/progress",
+      "destination": "/dashboard"
+    },
+    {
+      "source": "/analytics",
+      "destination": "/dashboard"
+    },
+    {
+      "source": "/signin",
+      "destination": "/login"
+    },
+    {
+      "source": "/auth",
+      "destination": "/login"
+    },
+    {
+      "source": "/register",
+      "destination": "/login"
+    },
+    {
+      "source": "/user/:username",
+      "destination": "/login?user=:username"
+    },
+    {
+      "source": "/api/health",
+      "destination": "/db-test"
+    },
+    {
+      "source": "/health",
+      "destination": "/db-test"
+    },
+    {
+      "source": "/status",
+      "destination": "/db-test"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/index",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/main",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "s-maxage=1, stale-while-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.(?:js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot))",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "trailingSlash": false,
+  "cleanUrls": true,
+  "env": {
+    "NEXT_PUBLIC_SUPABASE_URL": "@supabase_url",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "@supabase_anon_key"
+  }
+}
