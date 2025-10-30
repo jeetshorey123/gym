@@ -1,11 +1,13 @@
 {
-  "buildCommand": "cd my_portfolio && npm run build",
-  "installCommand": "cd my_portfolio && npm install",
-  "outputDirectory": "my_portfolio/.next",
+  "functions": {
+    "app/**/*.{js,ts,jsx,tsx}": {
+      "maxDuration": 30
+    }
+  },
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": "/"
     }
   ]
 }
