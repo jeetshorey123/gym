@@ -1,6 +1,8 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
   "rewrites": [
-   
     {
       "source": "/gym",
       "destination": "/"
@@ -59,8 +61,7 @@
     },
     {
       "source": "/(.*)",
-      "destination": "/",
-      "status": 200
+      "destination": "/"
     }
   ]
 }
