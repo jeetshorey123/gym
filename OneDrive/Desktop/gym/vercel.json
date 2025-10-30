@@ -1,91 +1,12 @@
 {
+  "framework": "nextjs",
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
-  "framework": "nextjs",
   "installCommand": "npm install",
-  "functions": {
-    "app/**/*.{js,ts,jsx,tsx}": {
-      "maxDuration": 30
-    }
-  },
-  "redirects": [
-    {
-      "source": "/home",
-      "destination": "/",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "/api/$1"
-    },
-    {
-      "source": "/gym",
-      "destination": "/"
-    },
-    {
-      "source": "/gym/(.*)",
-      "destination": "/$1"
-    },
-    {
-      "source": "/workout",
-      "destination": "/dashboard"
-    },
-    {
-      "source": "/training",
-      "destination": "/dashboard"
-    },
-    {
-      "source": "/exercise",
-      "destination": "/dashboard"
-    },
-    {
-      "source": "/progress",
-      "destination": "/dashboard"
-    },
-    {
-      "source": "/analytics",
-      "destination": "/dashboard"
-    },
-    {
-      "source": "/signin",
-      "destination": "/login"
-    },
-    {
-      "source": "/auth",
-      "destination": "/login"
-    },
-    {
-      "source": "/register",
-      "destination": "/login"
-    },
-    {
-      "source": "/user/:username",
-      "destination": "/login?user=:username"
-    },
-    {
-      "source": "/health",
-      "destination": "/db-test"
-    },
-    {
-      "source": "/status",
-      "destination": "/db-test"
-    }
-  ],
-  "headers": [
-    {
       "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-Content-Type-Options", 
-          "value": "nosniff"
-        }
-      ]
+      "destination": "/"
     }
   ]
 }
