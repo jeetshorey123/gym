@@ -1,5 +1,6 @@
 {
   "rewrites": [
+   
     {
       "source": "/gym",
       "destination": "/"
@@ -58,7 +59,8 @@
     },
     {
       "source": "/(.*)",
-      "destination": "/"
+      "destination": "/",
+      "status": 200
     }
   ]
 }
